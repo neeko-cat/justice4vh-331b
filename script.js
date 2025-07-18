@@ -70,16 +70,8 @@ function displayPeople(people) {
     });
 }
 
-// displayUsers([
-//     { name: "John Doe", rename: true, revert: false, pr: 123 },
-//     { name: "Jane Smith", rename: false, revert: true, pr: 124 },
-//     { name: "Alex Johnson", rename: true, revert: true },
-//     { name: "Emma Wilson", rename: false, revert: false, pr: 126 },
-//     { name: "Liam Brown", rename: true, revert: true, pr: 127 }
-// ])
-
 +async function() {
-    const result = await fetch('/people.json')
+    const result = await fetch('people.json')
     const json = await result.json()
 
     displayPeople(json)
